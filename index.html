@@ -9,36 +9,63 @@
 body {
     font-family: Arial;
     margin: 0;
-    background: #f5f5f5;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
 }
+
+/* HEADER */
 header {
-    background: #000;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
     color: white;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* CONTAINER */
 .container {
     padding: 20px;
 }
+
+/* BOX STYLE */
 .box {
     background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
 }
+
+/* ICON STYLE */
+.icon {
+    font-size: 40px;
+}
+
+/* BUTTONS */
 .btn {
     display: inline-block;
     padding: 12px 20px;
     text-decoration: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 25px;
     margin: 10px 5px;
+    font-weight: bold;
 }
+
 .call {
-    background: blue;
+    background: #007BFF;
 }
+
 .whatsapp {
-    background: green;
+    background: #25D366;
+}
+
+/* HOVER EFFECT */
+.btn:hover {
+    opacity: 0.8;
 }
 </style>
 
@@ -48,36 +75,48 @@ header {
 
 <header>
     <h1>🚗 Chennai Driver Service</h1>
-    <p>Safe • Reliable • On-Time</p>
+    <p>Safe • Friendly • Reliable</p>
 </header>
 
 <div class="container">
 
 <div class="box">
-    <h2>📍 Service Areas</h2>
+    <div class="icon">📍</div>
+    <h2>Service Areas</h2>
     <p>Mogappair • Anna Nagar • Ambattur • Chennai</p>
 </div>
 
 <div class="box">
-    <h2>🚗 Services</h2>
+    <div class="icon">🚘</div>
+    <h2>Services</h2>
     <p>✔ Local Trips</p>
     <p>✔ Outstation Trips</p>
     <p>✔ Night Driving</p>
 </div>
 
 <div class="box">
-    <h2>💰 Pricing</h2>
+    <div class="icon">💰</div>
+    <h2>Pricing</h2>
     <p>Hourly: ₹100</p>
     <p>Full Day: ₹1200</p>
     <p>Outstation: ₹2000+</p>
 </div>
 
 <div class="box">
-    <h2>📞 Contact</h2>
-    <p>Call: 99411 56562</p>
+    <div class="icon">📞</div>
+    <h2>Contact</h2>
+    <p><b>99411 56562</b></p>
     
-    <a class="btn call" href="tel:919941156562">Call Now</a>
-    <a class="btn whatsapp" href="https://wa.me/919941156562">WhatsApp Now</a>
+    <a class="btn call" href="tel:919941156562">📞 Call Now</a>
+    <a class="btn whatsapp" href="https://wa.me/919941156562">💬 WhatsApp</a>
+</div>
+
+<div class="box">
+    <div class="icon">⭐</div>
+    <h2>Why Choose Us?</h2>
+    <p>✔ Experienced Driver</p>
+    <p>✔ Safe Driving</p>
+    <p>✔ On-Time Service</p>
 </div>
 
 </div>
