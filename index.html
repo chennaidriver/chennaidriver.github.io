@@ -7,24 +7,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
         .whatsapp-green { background-color: #25D366; }
         
+        /* Highlighted Branding Color */
+        .brand-highlight { 
+            color: #fbbf24; /* Vibrant Gold */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
         /* Passport-style crop & size control */
         .driver-img-container {
-            width: 180px; /* Slightly larger than standard passport width */
-            height: 220px; /* Slightly larger than standard passport height */
+            width: 180px; 
+            height: 220px; 
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             border: 4px solid white;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
             margin: 0 auto;
         }
 
-        /* This zooms in slightly (scale 1.1) to crop white edges automatically */
         .driver-img-container img {
             width: 100%;
             height: 100%;
@@ -40,12 +48,12 @@
         .pulse-btn { animation: pulse 2s infinite; }
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-gray-50 text-gray-900">
 
     <header class="sticky top-0 z-50 bg-white shadow-sm border-b">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-xl md:text-2xl font-black text-blue-900 tracking-tight uppercase">
-                Chennai<span class="text-blue-600"> Driver Service</span>
+            <div class="text-xl md:text-2xl font-black tracking-tighter uppercase italic">
+                <span class="text-blue-900">Chennai</span><span class="text-yellow-500 ml-1">Driver Service</span>
             </div>
             <a href="tel:9941156562" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition flex items-center text-sm">
                 <i class="fas fa-phone-alt mr-2"></i> 9941156562
@@ -55,16 +63,19 @@
 
     <section class="gradient-bg text-white py-12 px-4">
         <div class="container mx-auto text-center max-w-4xl">
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Expert Drivers in Chennai</h1>
-            <p class="text-lg mb-8 text-blue-100 opacity-90">Safe, Reliable, and Professional Drivers at your doorstep 24/7.</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+                Expert Drivers from <br>
+                <span class="brand-highlight">Chennai Driver Service</span>
+            </h1>
+            <p class="text-lg mb-8 text-blue-100 opacity-90 font-medium">Safe, Reliable, and Professional Drivers at your doorstep 24/7.</p>
             
             <div class="mb-8">
-                <div class="driver-img-container">
+                <div class="driver-img-container bg-slate-800">
                     <img src="./driver.jpeg" 
                          alt="Driver Photo" 
-                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Chennai+Driver&background=0D8ABC&color=fff&size=256';">
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Chennai+Driver&background=fbbf24&color=0f172a&size=256';">
                 </div>
-                <p class="text-white mt-3 text-sm font-semibold tracking-wide">Verified Professional</p>
+                <p class="text-yellow-400 mt-4 text-sm font-bold tracking-widest uppercase">Verified Professional</p>
             </div>
 
             <a href="tel:9941156562" class="pulse-btn inline-block bg-yellow-500 hover:bg-yellow-400 text-blue-950 text-xl font-black py-4 px-10 rounded-xl shadow-2xl transition duration-300">
@@ -76,9 +87,9 @@
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-slate-900 mb-4">Book via WhatsApp</h2>
-            <p class="text-gray-600 mb-8 max-w-md mx-auto">Click below to start a chat or call on WhatsApp for instant booking and location sharing.</p>
+            <p class="text-gray-600 mb-8 max-w-md mx-auto font-medium">Click below to start a chat or call on WhatsApp for instant booking and location sharing.</p>
             
-            <a href="https://wa.me/919941156562" target="_blank" rel="noopener noreferrer" class="inline-flex items-center whatsapp-green text-white text-xl font-bold py-4 px-8 rounded-xl hover:brightness-110 transition shadow-lg">
+            <a href="https://wa.me/919941156562" target="_blank" rel="noopener noreferrer" class="inline-flex items-center whatsapp-green text-white text-xl font-bold py-4 px-10 rounded-xl hover:brightness-110 transition shadow-lg">
                 <i class="fab fa-whatsapp text-3xl mr-3"></i>
                 WhatsApp Chat / Call
             </a>
@@ -88,19 +99,19 @@
     <section class="py-12 bg-slate-50 border-t border-b">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div class="p-6">
+                <div class="p-6 bg-white rounded-xl shadow-sm">
                     <i class="fas fa-clock text-blue-600 text-2xl mb-3"></i>
-                    <h3 class="font-bold">24/7 Service</h3>
+                    <h3 class="font-bold text-blue-900">24/7 Service</h3>
                     <p class="text-sm text-gray-500">Available day or night across Chennai.</p>
                 </div>
-                <div class="p-6">
+                <div class="p-6 bg-white rounded-xl shadow-sm">
                     <i class="fas fa-shield-alt text-blue-600 text-2xl mb-3"></i>
-                    <h3 class="font-bold">Safe & Verified</h3>
+                    <h3 class="font-bold text-blue-900">Safe & Verified</h3>
                     <p class="text-sm text-gray-500">Experienced drivers with clean records.</p>
                 </div>
-                <div class="p-6">
+                <div class="p-6 bg-white rounded-xl shadow-sm">
                     <i class="fas fa-tag text-blue-600 text-2xl mb-3"></i>
-                    <h3 class="font-bold">Best Rates</h3>
+                    <h3 class="font-bold text-blue-900">Best Rates</h3>
                     <p class="text-sm text-gray-500">Affordable local and outstation pricing.</p>
                 </div>
             </div>
@@ -109,8 +120,8 @@
 
     <footer class="bg-slate-900 text-white py-10 text-center">
         <div class="container mx-auto px-4">
-            <p class="text-slate-400 text-sm mb-2">Chennai Driver Service</p>
-            <p class="font-bold">Call: 9941156562</p>
+            <p class="text-yellow-500 font-bold text-lg mb-2 italic">Chennai Driver Service</p>
+            <p class="font-bold text-blue-200">Call: 9941156562</p>
             <div class="mt-6 border-t border-slate-800 pt-6">
                 <p class="text-slate-500 text-xs">© 2026. All rights reserved.</p>
             </div>
