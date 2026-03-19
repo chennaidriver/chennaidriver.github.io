@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chennai Professional Call Driver | 9941156562</title>
+    <title>Chennai Driver Service | Professional Call Drivers 9941156562</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
         .whatsapp-green { background-color: #25D366; }
+        
+        /* Passport-style crop & size control */
+        .driver-img-container {
+            width: 180px; /* Slightly larger than standard passport width */
+            height: 220px; /* Slightly larger than standard passport height */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 0 auto;
+        }
+
+        /* This zooms in slightly (scale 1.1) to crop white edges automatically */
+        .driver-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.1); 
+        }
+
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -21,90 +44,76 @@
 
     <header class="sticky top-0 z-50 bg-white shadow-sm border-b">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black text-blue-900 tracking-tighter uppercase">
-                Chennai<span class="text-blue-600">Drivers</span>
+            <div class="text-xl md:text-2xl font-black text-blue-900 tracking-tight uppercase">
+                Chennai<span class="text-blue-600"> Driver Service</span>
             </div>
-            <a href="tel:9941156562" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition flex items-center text-sm md:text-base">
+            <a href="tel:9941156562" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition flex items-center text-sm">
                 <i class="fas fa-phone-alt mr-2"></i> 9941156562
             </a>
         </div>
     </header>
 
-    <section class="gradient-bg text-white py-16 px-4">
+    <section class="gradient-bg text-white py-12 px-4">
         <div class="container mx-auto text-center max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Reliable Professional Drivers in Chennai</h1>
-            <p class="text-xl mb-10 text-blue-100 opacity-90">Experience stress-free travel with our verified experts available 24/7 for all your driving needs.</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Expert Drivers in Chennai</h1>
+            <p class="text-lg mb-8 text-blue-100 opacity-90">Safe, Reliable, and Professional Drivers at your doorstep 24/7.</p>
             
-            <a href="tel:9941156562" class="pulse-btn inline-block bg-yellow-500 hover:bg-yellow-400 text-blue-950 text-2xl font-black py-5 px-12 rounded-2xl shadow-2xl transition duration-300">
+            <div class="mb-8">
+                <div class="driver-img-container">
+                    <img src="./driver.jpeg" 
+                         alt="Driver Photo" 
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Chennai+Driver&background=0D8ABC&color=fff&size=256';">
+                </div>
+                <p class="text-white mt-3 text-sm font-semibold tracking-wide">Verified Professional</p>
+            </div>
+
+            <a href="tel:9941156562" class="pulse-btn inline-block bg-yellow-500 hover:bg-yellow-400 text-blue-950 text-xl font-black py-4 px-10 rounded-xl shadow-2xl transition duration-300">
                 CALL: 9941156562
             </a>
         </div>
     </section>
 
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
-                
-                <div class="w-full md:w-1/2">
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-[10px] border-gray-100 bg-gray-200">
-                        <img src="./driver.jpeg" 
-                             alt="Chennai Call Driver" 
-                             class="w-full h-auto object-cover min-h-[400px]"
-                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-8">
-                            <span class="text-white font-bold text-lg bg-blue-600 px-4 py-1 rounded-lg shadow-lg">Our Verified Driver</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="w-full md:w-1/2 text-center md:text-left">
-                    <h2 class="text-4xl font-bold text-slate-900 mb-6">Connect via WhatsApp</h2>
-                    <p class="text-gray-600 mb-8 text-xl leading-relaxed">
-                        Need a driver right now? Start a <strong>WhatsApp Call</strong> for instant booking, location sharing, and estimated arrival time.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <a href="https://wa.me/919941156562" class="flex items-center justify-center md:justify-start whatsapp-green text-white text-2xl font-bold py-5 px-10 rounded-2xl hover:brightness-110 transition shadow-xl">
-                            <i class="fab fa-whatsapp text-4xl mr-4"></i>
-                            WhatsApp Call Now
-                        </a>
-                        <p class="text-sm text-gray-400 font-medium italic">Available 24 hours a day, 7 days a week.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-slate-50">
+    <section class="py-12 bg-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-car-side"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Local City Drive</h3>
-                    <p class="text-gray-500">Hourly basis drivers for shopping and office commutes.</p>
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Book via WhatsApp</h2>
+            <p class="text-gray-600 mb-8 max-w-md mx-auto">Click below to start a chat or call on WhatsApp for instant booking and location sharing.</p>
+            
+            <a href="https://wa.me/919941156562" target="_blank" rel="noopener noreferrer" class="inline-flex items-center whatsapp-green text-white text-xl font-bold py-4 px-8 rounded-xl hover:brightness-110 transition shadow-lg">
+                <i class="fab fa-whatsapp text-3xl mr-3"></i>
+                WhatsApp Chat / Call
+            </a>
+        </div>
+    </section>
+
+    <section class="py-12 bg-slate-50 border-t border-b">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="p-6">
+                    <i class="fas fa-clock text-blue-600 text-2xl mb-3"></i>
+                    <h3 class="font-bold">24/7 Service</h3>
+                    <p class="text-sm text-gray-500">Available day or night across Chennai.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-road"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Outstation Trips</h3>
-                    <p class="text-gray-500">Experienced highway drivers for long-distance family trips.</p>
+                <div class="p-6">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mb-3"></i>
+                    <h3 class="font-bold">Safe & Verified</h3>
+                    <p class="text-sm text-gray-500">Experienced drivers with clean records.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-plane-arrival"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Airport Pickup</h3>
-                    <p class="text-gray-500">Punctual drops and pickups to ensure you're always on time.</p>
+                <div class="p-6">
+                    <i class="fas fa-tag text-blue-600 text-2xl mb-3"></i>
+                    <h3 class="font-bold">Best Rates</h3>
+                    <p class="text-sm text-gray-500">Affordable local and outstation pricing.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-12 text-center">
+    <footer class="bg-slate-900 text-white py-10 text-center">
         <div class="container mx-auto px-4">
-            <div class="flex justify-center gap-8 mb-8 text-3xl">
-                <a href="tel:9941156562" class="text-blue-400 hover:text-white transition"><i class="fas fa-phone-square"></i></a>
-                <a href="https://wa.me/919941156562" class="text-green-400 hover:text-white transition"><i class="fab fa-whatsapp-square"></i></a>
+            <p class="text-slate-400 text-sm mb-2">Chennai Driver Service</p>
+            <p class="font-bold">Call: 9941156562</p>
+            <div class="mt-6 border-t border-slate-800 pt-6">
+                <p class="text-slate-500 text-xs">© 2026. All rights reserved.</p>
             </div>
-            <p class="text-slate-500 text-sm">© 2026 Chennai Call Driver Service. 9941156562</p>
         </div>
     </footer>
 
