@@ -14,26 +14,15 @@ body {
 
 /* HERO */
 .hero {
-    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     color: white;
-    padding: 80px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .hero h1 {
     margin: 0;
     font-size: 32px;
-    background: rgba(0,0,0,0.6);
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-
-.hero p {
-    background: rgba(0,0,0,0.6);
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 10px;
 }
 
 /* BUTTONS */
@@ -42,18 +31,19 @@ body {
     border-radius: 25px;
     text-decoration: none;
     color: white;
-    margin: 10px;
+    margin: 5px;
     display: inline-block;
 }
 
 .call { background: #ff9800; }
 .whatsapp { background: #25D366; }
 
-/* SECTION */
+/* CONTAINER */
 .container {
     padding: 20px;
 }
 
+/* BOX */
 .box {
     background: white;
     margin-bottom: 20px;
@@ -63,21 +53,27 @@ body {
     text-align: center;
 }
 
-/* IMAGE */
-.service-img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-/* GRID */
+/* SERVICE GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
-/* REVIEWS */
+/* CARTOON ICON */
+.service {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.service img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* REVIEW */
 .review {
     background: #f9f9f9;
     padding: 15px;
@@ -86,7 +82,12 @@ body {
     text-align: left;
 }
 
-/* STICKY BAR */
+/* MAP */
+iframe {
+    border-radius: 10px;
+}
+
+/* STICKY */
 .sticky {
     position: fixed;
     bottom: 0;
@@ -96,11 +97,10 @@ body {
 
 .sticky a {
     flex: 1;
-    text-align: center;
     padding: 15px;
+    text-align: center;
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .sticky .call { background: #ff9800; }
@@ -112,68 +112,68 @@ body {
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
     <h1>🚗 Chennai Driver Service</h1>
-    <p>Safe • Reliable • Professional Drivers</p><br>
+    <p>Safe • Reliable • Friendly</p>
 
-    <a class="btn call" href="tel:919941156562">📞 Call Now</a>
-    <a class="btn whatsapp" href="https://wa.me/919941156562">💬 WhatsApp</a>
+    <a class="btn call" href="tel:919941156562">Call Now</a>
+    <a class="btn whatsapp" href="https://wa.me/919941156562">WhatsApp</a>
 </div>
 
 <div class="container">
 
-<!-- SERVICES -->
 <div class="box">
     <h2>🚘 Our Services</h2>
+
     <div class="grid">
-        <div>Local Trips</div>
-        <div>Outstation</div>
-        <div>Night Driving</div>
-        <div>Full Day Booking</div>
+
+        <div class="service">
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743922.png">
+            <p>Local Trips</p>
+        </div>
+
+        <div class="service">
+            <img src="https://cdn-icons-png.flaticon.com/512/854/854894.png">
+            <p>Outstation</p>
+        </div>
+
+        <div class="service">
+            <img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png">
+            <p>Night Driving</p>
+        </div>
+
+        <div class="service">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+            <p>Full Day</p>
+        </div>
+
     </div>
-    <img class="service-img" src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
 </div>
 
-<!-- AREAS -->
 <div class="box">
-    <h2>📍 Service Areas</h2>
-    <p>Mogappair • Anna Nagar • Ambattur • Chennai</p>
+    <h2>📍 Location</h2>
+
+    <iframe 
+    src="https://www.google.com/maps?q=Mogappair+Chennai&output=embed"
+    width="100%" height="250">
+    </iframe>
 </div>
 
-<!-- PRICING -->
-<div class="box">
-    <h2>💰 Pricing</h2>
-    <p>Hourly: ₹100</p>
-    <p>Full Day: ₹1200</p>
-    <p>Outstation: ₹2000+</p>
-</div>
-
-<!-- REVIEWS -->
 <div class="box">
     <h2>⭐ Customer Reviews</h2>
 
     <div class="review">
-        ⭐⭐⭐⭐⭐  
-        Very safe driving and on time. Highly recommended!  
-        <br><b>- Ramesh, Anna Nagar</b>
+        ⭐⭐⭐⭐⭐ Good and safe driving  
+        <br><b>- Ramesh</b>
     </div>
 
     <div class="review">
-        ⭐⭐⭐⭐⭐  
-        Booked for outstation trip, very smooth driving experience.  
-        <br><b>- Priya, Mogappair</b>
-    </div>
-
-    <div class="review">
-        ⭐⭐⭐⭐⭐  
-        Friendly driver and reasonable price. Will call again.  
-        <br><b>- Kumar, Ambattur</b>
+        ⭐⭐⭐⭐⭐ On time and polite  
+        <br><b>- Priya</b>
     </div>
 
 </div>
 
-<!-- CONTACT -->
 <div class="box">
     <h2>📞 Contact</h2>
     <p><b>99411 56562</b></p>
@@ -181,10 +181,9 @@ body {
 
 </div>
 
-<!-- STICKY BUTTON -->
 <div class="sticky">
-    <a class="call" href="tel:919941156562">📞 Call</a>
-    <a class="whatsapp" href="https://wa.me/919941156562">💬 WhatsApp</a>
+    <a class="call" href="tel:919941156562">Call</a>
+    <a class="whatsapp" href="https://wa.me/919941156562">WhatsApp</a>
 </div>
 
 </body>
