@@ -20,12 +20,7 @@ body {
     text-align: center;
 }
 
-.hero h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
-/* BUTTONS */
+/* BUTTON */
 .btn {
     padding: 12px 20px;
     border-radius: 25px;
@@ -53,6 +48,22 @@ body {
     text-align: center;
 }
 
+/* DRIVER PHOTO */
+.driver img {
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* FORM */
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
 /* SERVICE GRID */
 .grid {
     display: grid;
@@ -60,31 +71,17 @@ body {
     gap: 15px;
 }
 
-/* CARTOON ICON */
-.service {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-}
-
 .service img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+    width: 70px;
 }
 
 /* REVIEW */
 .review {
     background: #f9f9f9;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     margin: 10px 0;
     text-align: left;
-}
-
-/* MAP */
-iframe {
-    border-radius: 10px;
 }
 
 /* STICKY */
@@ -117,63 +114,70 @@ iframe {
     <p>Safe • Reliable • Friendly</p>
 
     <a class="btn call" href="tel:919941156562">Call Now</a>
-    <a class="btn whatsapp" href="https://wa.me/919941156562">WhatsApp</a>
+    <a class="btn whatsapp" target="_blank" href="https://wa.me/919941156562">WhatsApp</a>
 </div>
 
 <div class="container">
 
+<!-- DRIVER -->
+<div class="box driver">
+    <h2>🧑‍✈️ Your Driver</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png">
+    <p>Experienced • Safe Driving • Local Expert</p>
+</div>
+
+<!-- SERVICES -->
 <div class="box">
-    <h2>🚘 Our Services</h2>
-
+    <h2>🚘 Services</h2>
     <div class="grid">
-
-        <div class="service">
-            <img src="https://cdn-icons-png.flaticon.com/512/743/743922.png">
-            <p>Local Trips</p>
-        </div>
-
-        <div class="service">
-            <img src="https://cdn-icons-png.flaticon.com/512/854/854894.png">
-            <p>Outstation</p>
-        </div>
-
-        <div class="service">
-            <img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png">
-            <p>Night Driving</p>
-        </div>
-
-        <div class="service">
-            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
-            <p>Full Day</p>
-        </div>
-
+        <div class="service"><img src="https://cdn-icons-png.flaticon.com/512/743/743922.png"><p>Local</p></div>
+        <div class="service"><img src="https://cdn-icons-png.flaticon.com/512/854/854894.png"><p>Outstation</p></div>
+        <div class="service"><img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png"><p>Night</p></div>
+        <div class="service"><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png"><p>Full Day</p></div>
     </div>
 </div>
 
+<!-- BOOKING -->
 <div class="box">
-    <h2>📍 Location</h2>
+    <h2>📋 Book a Driver</h2>
 
-    <iframe 
-    src="https://www.google.com/maps?q=Mogappair+Chennai&output=embed"
-    width="100%" height="250">
-    </iframe>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="phone" placeholder="Your Phone">
+    
+    <select id="service">
+        <option>Local Trip</option>
+        <option>Outstation</option>
+        <option>Night Driving</option>
+    </select>
+
+    <br>
+    <button class="btn whatsapp" onclick="sendWhatsApp()">Send Booking</button>
 </div>
 
+<!-- MAP -->
 <div class="box">
-    <h2>⭐ Customer Reviews</h2>
+    <h2>📍 Location</h2>
+    <iframe src="https://www.google.com/maps?q=Mogappair+Chennai&output=embed"
+    width="100%" height="250"></iframe>
+</div>
+
+<!-- REVIEWS -->
+<div class="box">
+    <h2>⭐ Reviews</h2>
 
     <div class="review">
-        ⭐⭐⭐⭐⭐ Good and safe driving  
+        ⭐⭐⭐⭐⭐ Safe driving and on time  
         <br><b>- Ramesh</b>
     </div>
 
     <div class="review">
-        ⭐⭐⭐⭐⭐ On time and polite  
+        ⭐⭐⭐⭐⭐ Very polite and smooth driving  
         <br><b>- Priya</b>
     </div>
 
 </div>
 
+<!-- CONTACT -->
 <div class="box">
     <h2>📞 Contact</h2>
     <p><b>99411 56562</b></p>
@@ -183,8 +187,20 @@ iframe {
 
 <div class="sticky">
     <a class="call" href="tel:919941156562">Call</a>
-    <a class="whatsapp" href="https://wa.me/919941156562">WhatsApp</a>
+    <a class="whatsapp" target="_blank" href="https://wa.me/919941156562">WhatsApp</a>
 </div>
+
+<script>
+function sendWhatsApp() {
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var service = document.getElementById("service").value;
+
+    var message = "Booking Request:%0AName: " + name + "%0APhone: " + phone + "%0AService: " + service;
+
+    window.open("https://wa.me/919941156562?text=" + message, "_blank");
+}
+</script>
 
 </body>
 </html>
