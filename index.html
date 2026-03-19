@@ -7,118 +7,184 @@
 
 <style>
 body {
-    font-family: Arial;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    background: #f4f7fb;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
     color: white;
-    padding: 30px;
+    padding: 80px 20px;
     text-align: center;
 }
-header h1 {
+
+.hero h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 32px;
+    background: rgba(0,0,0,0.6);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
-/* CONTAINER */
-.container {
-    padding: 20px;
-}
-
-/* BOX STYLE */
-.box {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    text-align: center;
-}
-
-/* ICON STYLE */
-.icon {
-    font-size: 40px;
+.hero p {
+    background: rgba(0,0,0,0.6);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
 }
 
 /* BUTTONS */
 .btn {
-    display: inline-block;
     padding: 12px 20px;
+    border-radius: 25px;
     text-decoration: none;
     color: white;
-    border-radius: 25px;
-    margin: 10px 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.call { background: #ff9800; }
+.whatsapp { background: #25D366; }
+
+/* SECTION */
+.container {
+    padding: 20px;
+}
+
+.box {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* IMAGE */
+.service-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* REVIEWS */
+.review {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* STICKY BAR */
+.sticky {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.sticky a {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.call {
-    background: #007BFF;
-}
+.sticky .call { background: #ff9800; }
+.sticky .whatsapp { background: #25D366; }
 
-.whatsapp {
-    background: #25D366;
-}
-
-/* HOVER EFFECT */
-.btn:hover {
-    opacity: 0.8;
-}
 </style>
 
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
     <h1>🚗 Chennai Driver Service</h1>
-    <p>Safe • Friendly • Reliable</p>
-</header>
+    <p>Safe • Reliable • Professional Drivers</p><br>
+
+    <a class="btn call" href="tel:919941156562">📞 Call Now</a>
+    <a class="btn whatsapp" href="https://wa.me/919941156562">💬 WhatsApp</a>
+</div>
 
 <div class="container">
 
+<!-- SERVICES -->
 <div class="box">
-    <div class="icon">📍</div>
-    <h2>Service Areas</h2>
+    <h2>🚘 Our Services</h2>
+    <div class="grid">
+        <div>Local Trips</div>
+        <div>Outstation</div>
+        <div>Night Driving</div>
+        <div>Full Day Booking</div>
+    </div>
+    <img class="service-img" src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
+</div>
+
+<!-- AREAS -->
+<div class="box">
+    <h2>📍 Service Areas</h2>
     <p>Mogappair • Anna Nagar • Ambattur • Chennai</p>
 </div>
 
+<!-- PRICING -->
 <div class="box">
-    <div class="icon">🚘</div>
-    <h2>Services</h2>
-    <p>✔ Local Trips</p>
-    <p>✔ Outstation Trips</p>
-    <p>✔ Night Driving</p>
-</div>
-
-<div class="box">
-    <div class="icon">💰</div>
-    <h2>Pricing</h2>
+    <h2>💰 Pricing</h2>
     <p>Hourly: ₹100</p>
     <p>Full Day: ₹1200</p>
     <p>Outstation: ₹2000+</p>
 </div>
 
+<!-- REVIEWS -->
 <div class="box">
-    <div class="icon">📞</div>
-    <h2>Contact</h2>
+    <h2>⭐ Customer Reviews</h2>
+
+    <div class="review">
+        ⭐⭐⭐⭐⭐  
+        Very safe driving and on time. Highly recommended!  
+        <br><b>- Ramesh, Anna Nagar</b>
+    </div>
+
+    <div class="review">
+        ⭐⭐⭐⭐⭐  
+        Booked for outstation trip, very smooth driving experience.  
+        <br><b>- Priya, Mogappair</b>
+    </div>
+
+    <div class="review">
+        ⭐⭐⭐⭐⭐  
+        Friendly driver and reasonable price. Will call again.  
+        <br><b>- Kumar, Ambattur</b>
+    </div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="box">
+    <h2>📞 Contact</h2>
     <p><b>99411 56562</b></p>
-    
-    <a class="btn call" href="tel:919941156562">📞 Call Now</a>
-    <a class="btn whatsapp" href="https://wa.me/919941156562">💬 WhatsApp</a>
 </div>
 
-<div class="box">
-    <div class="icon">⭐</div>
-    <h2>Why Choose Us?</h2>
-    <p>✔ Experienced Driver</p>
-    <p>✔ Safe Driving</p>
-    <p>✔ On-Time Service</p>
 </div>
 
+<!-- STICKY BUTTON -->
+<div class="sticky">
+    <a class="call" href="tel:919941156562">📞 Call</a>
+    <a class="whatsapp" href="https://wa.me/919941156562">💬 WhatsApp</a>
 </div>
 
 </body>
