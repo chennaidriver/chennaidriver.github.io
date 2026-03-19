@@ -16,18 +16,30 @@ body {
 .hero {
     background: linear-gradient(to right, #1e3c72, #2a5298);
     color: white;
-    padding: 50px 20px;
+    padding: 30px 15px;
     text-align: center;
 }
 
-/* BUTTON */
+.hero h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 14px;
+}
+
+/* BUTTONS */
 .btn {
-    padding: 12px 20px;
-    border-radius: 25px;
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 14px;
+    border-radius: 30px;
     text-decoration: none;
     color: white;
-    margin: 5px;
-    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .call { background: #ff9800; }
@@ -35,53 +47,64 @@ body {
 
 /* CONTAINER */
 .container {
-    padding: 20px;
+    padding: 15px;
 }
 
 /* BOX */
 .box {
     background: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* DRIVER */
+.driver {
     text-align: center;
 }
 
-/* DRIVER PHOTO */
 .driver img {
-    width: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
-    margin-top: 10px;
+    object-fit: cover;
+}
+
+/* SERVICES */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.service {
+    background: #f1f3f6;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
 }
 
 /* FORM */
 input, select {
-    width: 90%;
-    padding: 10px;
-    margin: 8px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-/* SERVICE GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.service img {
-    width: 70px;
-}
-
-/* REVIEW */
-.review {
-    background: #f9f9f9;
-    padding: 10px;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
     border-radius: 10px;
-    margin: 10px 0;
-    text-align: left;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 30px;
+    border: none;
+    background: #25D366;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /* STICKY */
@@ -94,17 +117,17 @@ input, select {
 
 .sticky a {
     flex: 1;
-    padding: 15px;
+    padding: 14px;
     text-align: center;
     color: white;
     text-decoration: none;
+    font-size: 16px;
 }
 
 .sticky .call { background: #ff9800; }
 .sticky .whatsapp { background: #25D366; }
 
 </style>
-
 </head>
 
 <body>
@@ -113,81 +136,48 @@ input, select {
     <h1>🚗 Chennai Driver Service</h1>
     <p>Safe • Reliable • Friendly</p>
 
-    <a class="btn call" href="tel:919941156562">Call Now</a>
-    <a class="btn whatsapp" target="_blank" href="https://wa.me/919941156562">WhatsApp</a>
+    <a class="btn call" href="tel:919941156562">📞 Call Now</a>
+    <a class="btn whatsapp" target="_blank" href="https://wa.me/919941156562">💬 WhatsApp</a>
 </div>
 
 <div class="container">
 
-<!-- DRIVER -->
 <div class="box driver">
-    <h2>🧑‍✈️ Your Driver</h2>
-    <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png">
-    <p>Experienced • Safe Driving • Local Expert</p>
+    <h3>🧑‍✈️ Your Driver</h3>
+    <img src="driver.jpg">
+    <p><b>Experienced & Trusted Driver</b></p>
 </div>
 
-<!-- SERVICES -->
 <div class="box">
-    <h2>🚘 Services</h2>
+    <h3>🚘 Services</h3>
     <div class="grid">
-        <div class="service"><img src="https://cdn-icons-png.flaticon.com/512/743/743922.png"><p>Local</p></div>
-        <div class="service"><img src="https://cdn-icons-png.flaticon.com/512/854/854894.png"><p>Outstation</p></div>
-        <div class="service"><img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png"><p>Night</p></div>
-        <div class="service"><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png"><p>Full Day</p></div>
+        <div class="service">🚗 Local</div>
+        <div class="service">🛣️ Outstation</div>
+        <div class="service">🌙 Night</div>
+        <div class="service">📅 Full Day</div>
     </div>
 </div>
 
-<!-- BOOKING -->
 <div class="box">
-    <h2>📋 Book a Driver</h2>
+    <h3>📋 Book Driver</h3>
 
     <input type="text" id="name" placeholder="Your Name">
-    <input type="text" id="phone" placeholder="Your Phone">
-    
+    <input type="tel" id="phone" placeholder="Mobile Number">
+
     <select id="service">
         <option>Local Trip</option>
-        <option>Outstation</option>
+        <option>Outstation Trip</option>
         <option>Night Driving</option>
     </select>
 
-    <br>
-    <button class="btn whatsapp" onclick="sendWhatsApp()">Send Booking</button>
-</div>
-
-<!-- MAP -->
-<div class="box">
-    <h2>📍 Location</h2>
-    <iframe src="https://www.google.com/maps?q=Mogappair+Chennai&output=embed"
-    width="100%" height="250"></iframe>
-</div>
-
-<!-- REVIEWS -->
-<div class="box">
-    <h2>⭐ Reviews</h2>
-
-    <div class="review">
-        ⭐⭐⭐⭐⭐ Safe driving and on time  
-        <br><b>- Ramesh</b>
-    </div>
-
-    <div class="review">
-        ⭐⭐⭐⭐⭐ Very polite and smooth driving  
-        <br><b>- Priya</b>
-    </div>
-
-</div>
-
-<!-- CONTACT -->
-<div class="box">
-    <h2>📞 Contact</h2>
-    <p><b>99411 56562</b></p>
+    <button onclick="sendWhatsApp()">📲 Send via WhatsApp</button>
 </div>
 
 </div>
 
 <div class="sticky">
-    <a class="call" href="tel:919941156562">Call</a>
-    <a class="whatsapp" target="_blank" href="https://wa.me/919941156562">WhatsApp</a>
+    <a class="call" href="tel:919941156562">📞 Call</a>
+    <a class="whatsapp" target="_blank" href="https://wa.me/919941156562">💬 WhatsApp</a>
 </div>
 
 <script>
